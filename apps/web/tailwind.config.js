@@ -1,8 +1,8 @@
 /** @type {import('tailwindcss').Config} */
-import campfire from './tailwind.jazicorn-dev.js'
+import jazicorn from './tailwind.jazicorn-dev.js'
 export default {
   presets: [
-    campfire
+    jazicorn
   ],
   mode: 'jit',
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
