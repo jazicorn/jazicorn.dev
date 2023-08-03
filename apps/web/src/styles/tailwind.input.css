@@ -161,10 +161,40 @@
   /* color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: rgba(255, 255, 255, 0.87); */
+  /* height: 100%; */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+body {
+  height: 100%;
+  position: fixed;
+}
+
+.h1 {
+  font-size: 500px;
+}
+
+.h2 {
+  font-size: 400px;
+}
+
+.h3 {
+  font-size: 300px;
+}
+
+.h4 {
+  font-size: 200px;
+}
+
+.h5 {
+  font-size: 100px;
+}
+
+.h6 {
+  font-size: 72px;
 }

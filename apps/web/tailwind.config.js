@@ -1,9 +1,10 @@
 /** @type {import('tailwindcss').Config} */
-import jazicorn from './tailwind.jazicorn-dev.js'
+import jazicorn from './tailwind.jazicorn-dev.js';
+
 export default {
   presets: [
-    jazicorn
+   jazicorn
   ],
   mode: 'jit',
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}']
 }
