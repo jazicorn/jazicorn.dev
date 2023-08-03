@@ -33,11 +33,11 @@ const { isMobile } = useWindowSize();
                 ${isMobile ? 'tw-flex-col [&>*]:tw-w-[200px] tw-divide-y-2 tw-place-items-center [&>*]:tw-place-content-center tw-p-4 [&>*]:tw-p-2' : ' tw-h-[52px] tw-flex-row'}
                 tw-border-b tw-border-jazicorn-pink tw-w-full tw-flex tw-justify-around `}>
         <h2 className={`${darkMode ? 'hover:tw-text-jazicorn-pink' : 'hover:tw-text-jazicorn-pink'}
-                        ${darkMode ? '' : ''}
-                        tw-text-xl tw-flex tw-flex-row tw- tw-place-items-center font-playfair-var-italic`}>
+                        ${isMobile ? '' : ''} tw-basis-1/3 
+                        tw-text-xl tw-flex tw-flex-row tw- tw-items-center tw-place-content-center font-playfair-var-italic`}>
             <Link to={`/`}> jazicorn.dev</Link>
         </h2>
-        <nav className="tw-flex tw-flex-row tw-items-center tw-gap-2">
+        <nav className={`${darkMode ? '' : ''} tw-flex tw-flex-row tw-items-center tw-place-content-center tw-gap-2 tw-border-jazicorn-pink  tw-border-x tw-basis-1/3`}>
             <ul className={`${darkMode ? 'tw-text-white hover:[&>li]:tw-text-jazicorn-pink' : 
             'hover:[&>li]:tw-text-jazicorn-pink'} tw-pt-1 tw-text-[17px] tw-flex tw-flex-row tw-place-items-center tw-gap-4`}>
                 <li className={`${darkMode ? '' : ''} `}>
@@ -57,7 +57,7 @@ const { isMobile } = useWindowSize();
                 </li>
             </ul>
         </nav>
-        <nav className="tw-flex tw-flex-row tw-items-center tw-gap-2">
+        <nav className="tw-flex tw-flex-row tw-items-center tw-place-content-center tw-gap-2 tw-basis-1/3">
             <ul className={`${darkMode ? 'tw-text-white hover:[&>li]:tw-text-jazicorn-pink' : 
             'hover:[&>li]:tw-text-jazicorn-pink'} tw-flex tw-flex-row tw-place-items-center tw-gap-4`}>
                 <li className={`${darkMode ? '' : ''} `}>
