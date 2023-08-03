@@ -2,18 +2,199 @@
 @tailwind components;
 @tailwind utilities;
 
+/*Playfair_Display*/
+@font-face {
+  font-family: 'Playfair-var';
+  src: url('fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf') format('truetype');
+  src: url('fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Playfair-var-italic';
+  src: url('fonts/Playfair_Display/static/PlayfairDisplay-Italic.ttf') format('truetype');
+  src: url('fonts/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+  font-style: italic;
+}
+
+/*SourceSansPro*/
+@font-face {
+  font-family: 'Source-var';
+  src: url('fonts/Source_Code_Pro/SourceCodePro-VariableFont_wght.ttf') format('truetype');
+  src: url('fonts/Source_Code_Pro/static/SourceCodePro-Regular.ttf') format('truetype');
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Source-var-italic';
+  src: url('fonts/Source_Code_Pro/static/SourceCodePro-Italic.ttf') format('truetype');
+  src: url('fonts/Source_Code_Pro/SourceCodePro-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+  font-style: italic;
+}
+
+/*Inconsolata*/
+@font-face {
+  font-family: 'Incon-var';
+  src: url('fonts/Inconsolata/static/Inconsolata-Regular.ttf') format('truetype');
+  src: url('fonts/Inconsolata/Inconsolata-VariableFont_wdth_wght.ttf') format('truetype');
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Incon-var-italic';
+  src: url('fonts/Inconsolata/static/Inconsolata-Italic.ttf') format('truetype');
+  src: url('fonts/Inconsolata/Inconsolata-VariableFont_wdth_wght.ttf') format('truetype');
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+  font-style: italic;
+}
+
+/*Font: Playfair_Display | italic*/
+/*Default is font-weight: 400*/
+.font-playfair-var-italic {
+  font-family: Playfair-var-italic;
+  font-stretch: 75% 125%;
+}
+
+.font-playfair-var-italic-200 {
+  font-family: Playfair-var-italic;
+  font-weight: 200;
+  font-stretch: 75% 125%;
+}
+
+.font-playfair-var-italic-600 {
+  font-family: Playfair-var-italic;
+  font-weight: 600;
+  font-stretch: 75% 125%;
+}
+
+.font-playfair-var-italic-800 {
+  font-family: Playfair-var-italic;
+  font-weight: 800;
+  font-stretch: 75% 125%;
+}
+
+/*Font: Source_Code_Pro | normal*/
+/*Default is font-weight: 400*/
+.font-source-var {
+  font-family: Source-var;
+  font-stretch: 75% 125%;
+}
+
+.font-source-var-200 {
+  font-family: Source-var;
+  font-weight: 200;
+  font-stretch: 75% 125%;
+}
+
+.font-source-var-600 {
+  font-family: Source-var;
+  font-weight: 600;
+  font-stretch: 75% 125%;
+}
+
+.font-source-var-800 {
+  font-family: Source-var;
+  font-weight: 800;
+  font-stretch: 75% 125%;
+}
+
+/*Font: Inconsolata | normal*/
+/*Default is font-weight: 400*/
+.font-incon-var {
+  font-family: Incon-var;
+  font-stretch: 75% 125%;
+}
+
+.font-incon-var-200 {
+  font-family: Incon-var;
+  font-weight: 200;
+  font-stretch: 75% 125%;
+}
+
+.font-incon-var-600 {
+  font-weight: 600;
+  font-stretch: 75% 125%;
+}
+
+.font-incon-var-800 {
+  font-family: Incon-var;
+  font-weight: 800;
+  font-stretch: 75% 125%;
+}
+
+/*Font: Inconsolata | italic*/
+/*Default is font-weight: 400*/
+.font-incon-var-italic {
+  font-family: Incon-var-italic;
+  font-stretch: 75% 125%;
+}
+
+.font-incon-var-italic-200 {
+  font-family: Incon-var-italic;
+  font-weight: 200;
+  font-stretch: 75% 125%;
+}
+
+.font-incon-var-italic-600 {
+  font-family: Incon-var-italic;
+  font-weight: 600;
+  font-stretch: 75% 125%;
+}
+
+.font-incon-var-italic-800 {
+  font-family: Incon-var-italic;
+  font-weight: 800;
+  font-stretch: 75% 125%;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
 
-  color-scheme: light dark;
+  /* color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: rgba(255, 255, 255, 0.87); */
+  /* height: 100%; */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+body {
+  height: 100%;
+  position: fixed;
+}
+
+.h1 {
+  font-size: 500px;
+}
+
+.h2 {
+  font-size: 400px;
+}
+
+.h3 {
+  font-size: 300px;
+}
+
+.h4 {
+  font-size: 200px;
+}
+
+.h5 {
+  font-size: 100px;
+}
+
+.h6 {
+  font-size: 72px;
 }

@@ -10,23 +10,24 @@ import ReactDOM from 'react-dom/client'
 // import { Provider } from 'react-redux'
 // import store from './redux/store.ts'
 /**React Router*/
-import { RouterProvider, createHashRouter as Router, createRoutesFromElements, Route} from 'react-router-dom'
+import { RouterProvider, createBrowserRouter as Router, createRoutesFromElements, Route} from 'react-router-dom'
 import ErrorBoundary from "./ErrorBoundary.tsx";
 /**React Query */
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 /**Pages*/
-import Home from './pages/Home.tsx'
+import App from './pages/App.tsx';
+/**Components*/
+import Home from './components/Home.tsx';
+import About from './components/About.tsx';
+import Projects from './components/Projects.tsx';
 
 const router = Router(
   createRoutesFromElements(
-    <Route>
-      <Route path="/" element={<Home />} errorElement={<ErrorBoundary />} />
-      {/* <Route path="projects" element={<Dashboard />}>
-        <Route path="" element={} errorElement={<ErrorBoundary />}/>
-        <Route path="recodecamp" element={} errorElement={<ErrorBoundary />}/>
-      </Route>
-      <Route path="*" element={<Home/>} errorElement={<ErrorBoundary />}/> */}
+    <Route path="/" element={<App />} errorElement={<ErrorBoundary />}>
+      <Route path="" element={<Home />} errorElement={<ErrorBoundary />} />
+      <Route path="about" element={<About/>} errorElement={<ErrorBoundary />}/>
+      <Route path="projects" element={<Projects/>} errorElement={<ErrorBoundary />}/>
     </Route>
   )
 )
@@ -36,7 +37,7 @@ const queryClient = new QueryClient();
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <Provider store={store}>
+    {/* <Provider store={store}> */}
       <ThemeProvider>
         <MantineProvider withGlobalStyles withNormalizeCSS>
           <QueryClientProvider client={queryClient}>
@@ -45,6 +46,6 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
           </QueryClientProvider>
         </MantineProvider>
       </ThemeProvider>
-    </Provider>
+    {/* </Provider> */}
   </React.StrictMode>
 )
