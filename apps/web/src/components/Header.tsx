@@ -31,7 +31,7 @@ const { isMobile, isMobileMD, isDesktopMDLG, isDesktopLG, isDesktopXL } = useWin
   return (
     <header
     className={`${darkMode ? 'tw-bg-black tw-text-jazicorn-gray ' : 'tw-bg-light'} 
-                ${isMobileMD ? 'tw-flex-col tw-place-items-center [&>*]:tw-place-content-center [&>*]:tw-p-4' : ' tw-h-[52px] tw-flex-row tw-border-b tw-border-jazicorn-pink '}
+                ${isMobileMD ? 'tw-flex-col tw-place-items-center [&>*]:tw-place-content-center [&>*]:tw-py-3' : ' tw-h-[52px] tw-flex-row tw-border-b tw-border-jazicorn-pink '}
                 tw-w-full tw-flex tw-justify-around `}>
         <h2 className={`${darkMode ? 'hover:tw-text-jazicorn-pink' : 'hover:tw-text-jazicorn-pink'}
                         ${isMobileMD ? 'tw-border-x tw-border-jazicorn-pink tw-w-[300px]' : ''}  tw-basis-3/12
