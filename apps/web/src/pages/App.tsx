@@ -12,7 +12,7 @@ function App() {
 
   return (
     <div className={`${darkMode ? 'tw-bg-black': 'tw-bg-white' } ${isMobile ? '' : ''} 
-        font-incon-var tw-w-screen tw-h-screen tw-min-h-screen`}>
+        font-incon-var tw-w-screen tw-h-screen tw-min-h-screen tw-overflow-scroll`}>
         <div>
           <Header />
         </div>
