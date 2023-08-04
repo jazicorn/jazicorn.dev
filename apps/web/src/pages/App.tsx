@@ -11,11 +11,14 @@ function App() {
   const darkMode = state.darkMode;
 
   return (
-    <div className={`${darkMode ? 'tw-bg-black': 'tw-bg-white' } 
-                     ${isMobile ? '' : ''} font-incon-var 
-                      tw-w-screen tw-h-screen`}>
-        <Header />
-        <Outlet />
+    <div className={`${darkMode ? 'tw-bg-black': 'tw-bg-white' } ${isMobile ? '' : ''} 
+        font-incon-var tw-w-screen tw-h-screen tw-min-h-screen`}>
+        <div>
+          <Header />
+        </div>
+        <div>
+          <Outlet />
+        </div>
     </div>
   )
 }
