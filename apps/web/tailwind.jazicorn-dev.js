@@ -34,7 +34,16 @@ export default {
           '800': '#1f2937',
           '900': '#111827',
           '950': '#030712'
-        }
+        },
+        'jazicorn-emerald': {
+          DEFAULT: '#34d399',
+        },
+        'jazicorn-amber': {
+          DEFAULT: '#451a03',
+        },
+        'jazicorn-purple': {
+          DEFAULT: '#7e22ce',
+        },
       },
       backdropBrightness: {
         15: '.15',
@@ -47,12 +56,24 @@ export default {
         25: '.25',
       },
        gridTemplateColumns: {
-        'layout-home': 'auto',
-        'layout-home-mobile': 'auto',
+        'layout-app': 'auto',
+        'layout-app-mobile': 'auto',
+        'layout-home': '1fr, minmax(100px, 800px), 1fr',
+        'layout-home-xl': '1fr, minmax(100px, 1200px), 1fr',
+        'layout-home-mobile': '1fr, minmax(100px, 800px), 1fr',
+        'layout-banner': 'repeat(6, 1fr)',
+        'layout-banner-xl': '1fr, minmax(100px, 1200px), 1fr',
+        'layout-banner-mobile': '1fr, minmax(100px, 800px), 1fr'
       },
       gridTemplateRows: {
-        'layout-home': '3em, auto',
-        'layout-home-mobile': 'auto',
+        'layout-app': '3em, auto',
+        'layout-app-mobile': 'auto',
+        'layout-home': 'minmax(300px, 550px), auto',
+        'layout-home-xl': 'minmax(300px, 650px), auto',
+        'layout-home-mobile': 'minmax(200px, 500px), auto',
+        'layout-banner': 'repeat(5, 1fr)',
+        'layout-banner-xl': '1fr, minmax(100px, 1200px), 1fr',
+        'layout-banner-mobile': '1fr, minmax(100px, 800px), 1fr'
       }
     },
   }
