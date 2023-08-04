@@ -35,6 +35,7 @@ export default function useWindowSize() {
     isMobileMD: typeof windowSize?.width === 'number' && windowSize?.width < 968,
     isDesktop: typeof windowSize?.width === 'number' && windowSize?.width >= 768,
     isDesktopMDLG: typeof windowSize?.width === 'number' && windowSize?.width >= 768 && windowSize?.width < 1280,
+    isDesktopLG: typeof windowSize?.width === 'number' && windowSize?.width >= 968 && windowSize?.width < 1280,
     isDesktopXL: typeof windowSize?.width === 'number' && windowSize?.width >= 1280,
     isHMobile: typeof windowSize?.height === 'number' && windowSize?.height < 768,
     isHDesktop: typeof windowSize?.height === 'number' && windowSize?.height >= 768,
