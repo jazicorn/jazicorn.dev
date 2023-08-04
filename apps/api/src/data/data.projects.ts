@@ -1,0 +1,38 @@
+export const projects = [
+    {
+        index: 1,
+        name: "jazicorn.dev",
+        desc: "Personal Portfolio Website",
+        github: "https://github.com/jazicorn/jazicorn.dev",
+        site: "jazicorn-dev-web.vercel.app",
+        tags: [
+            "CSS",
+            "TailwindCSS",
+            "Typescript",
+            "React.js",
+            "Node.js",
+            "Express.js",
+        ],
+        Year: "2023",
+    },
+    {
+        index: 2,
+        name: "ReCodeCamp",
+        desc: "ReCode makes perfect. Practice Javascript fundamentals to better improve your understanding. Utilizes Pokemon API to reward users with pokemon and badges the more they practice.",
+        github: "https://github.com/jazicorn/recodecamp",
+        site: "recodecamp-web.vercel.app/",
+        tags: [
+            "HTML",
+            "CSS",
+            "TailwindCSS",
+            "Typescript",
+            "React.js",
+            "Redux",
+            "Node.js",
+            "Express.js",
+            "PostgreSQL",
+            "PokemonAPI",
+        ],
+        Year: "2023",
+    },
+];
