@@ -2,6 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  /* color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: rgba(255, 255, 255, 0.87); */
+  margin: 0;
+  padding: 0;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
 /*Playfair_Display*/
 @font-face {
   font-family: 'Playfair-var';
@@ -46,14 +68,6 @@
   font-weight: 125 950;
   font-stretch: 75% 125%;
   font-style: normal;
-}
-@font-face {
-  font-family: 'Incon-var-italic';
-  src: url('fonts/Inconsolata/static/Inconsolata-Italic.ttf') format('truetype');
-  src: url('fonts/Inconsolata/Inconsolata-VariableFont_wdth_wght.ttf') format('truetype');
-  font-weight: 125 950;
-  font-stretch: 75% 125%;
-  font-style: italic;
 }
 
 /*Font: Playfair_Display | italic*/
@@ -130,51 +144,6 @@
   font-stretch: 75% 125%;
 }
 
-/*Font: Inconsolata | italic*/
-/*Default is font-weight: 400*/
-.font-incon-var-italic {
-  font-family: Incon-var-italic;
-  font-stretch: 75% 125%;
-}
-
-.font-incon-var-italic-200 {
-  font-family: Incon-var-italic;
-  font-weight: 200;
-  font-stretch: 75% 125%;
-}
-
-.font-incon-var-italic-600 {
-  font-family: Incon-var-italic;
-  font-weight: 600;
-  font-stretch: 75% 125%;
-}
-
-.font-incon-var-italic-800 {
-  font-family: Incon-var-italic;
-  font-weight: 800;
-  font-stretch: 75% 125%;
-}
-
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-
-  /* color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: rgba(255, 255, 255, 0.87); */
-  /* height: 100%; */
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-body {
-  height: 100%;
-  position: fixed;
-}
-
 .h1 {
   font-size: 500px;
 }
@@ -197,4 +166,38 @@ body {
 
 .h6 {
   font-size: 72px;
+}
+
+.h7 {
+  font-size: 60px;
+}
+
+.h8 {
+  font-size: 48px;
+}
+
+.h9 {
+  font-size: 36px;
+}
+
+.h10 {
+  font-size: 28px;
+}
+
+.h11 {
+  font-size: 20px;
+}
+
+.h12 {
+  font-size: 14px;
+}
+
+.break-word {
+  white-space: pre;
+}
+
+hr.style-three {
+    border: 0;
+    border-bottom: 1px dashed #ccc;
+    background: black;
 }

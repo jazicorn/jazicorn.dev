@@ -21,6 +21,10 @@ import App from './pages/App.tsx';
 import Home from './components/Home.tsx';
 import About from './components/About.tsx';
 import Projects from './components/Projects.tsx';
+import Contact from './components/Contact.tsx';
+import Resources from './components/Resources.tsx';
+import Resume from './components/Resume.tsx';
+import Blog from './components/Blog.tsx';
 
 const router = Router(
   createRoutesFromElements(
@@ -28,6 +32,10 @@ const router = Router(
       <Route path="" element={<Home />} errorElement={<ErrorBoundary />} />
       <Route path="about" element={<About/>} errorElement={<ErrorBoundary />}/>
       <Route path="projects" element={<Projects/>} errorElement={<ErrorBoundary />}/>
+      <Route path="contact" element={<Contact/>} errorElement={<ErrorBoundary />}/>
+      <Route path="resources" element={<Resources/>} errorElement={<ErrorBoundary />}/>
+      <Route path="resume" element={<Resume/>} errorElement={<ErrorBoundary />}/>
+      <Route path="blog" element={<Blog/>} errorElement={<ErrorBoundary />}/>
     </Route>
   )
 )
