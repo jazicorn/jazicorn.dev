@@ -63,17 +63,21 @@ export default {
         'layout-home-mobile': '1fr, minmax(100px, 800px), 1fr',
         'layout-banner': 'repeat(6, 1fr)',
         'layout-banner-xl': '1fr, minmax(100px, 1200px), 1fr',
-        'layout-banner-mobile': '1fr, minmax(100px, 800px), 1fr'
+        'layout-banner-mobile': '1fr, minmax(100px, 800px), 1fr',
+        'layout-project': '50px, 450px, 350px',
+        'layout-project-reverse': '350px, 450px, 50px',
       },
       gridTemplateRows: {
         'layout-app': '3em, auto',
         'layout-app-mobile': 'auto',
         'layout-home': 'minmax(300px, 550px), auto',
         'layout-home-xl': 'minmax(300px, 650px), auto',
-        'layout-home-mobile': 'minmax(200px, 500px), auto',
+        'layout-home-mobile': 'minmax(200px, 500px)',
         'layout-banner': 'repeat(5, 1fr)',
         'layout-banner-xl': '1fr, minmax(100px, 1200px), 1fr',
-        'layout-banner-mobile': '1fr, minmax(100px, 800px), 1fr'
+        'layout-banner-mobile': '1fr, minmax(100px, 800px), 1fr',
+        'layout-project': 'auto'
+        
       }
     },
   }
