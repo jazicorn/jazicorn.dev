@@ -37,11 +37,11 @@ const { isMobile, isMobileMD, isDesktopMDXL, isDesktopLG, isDesktopXL } = useWin
                 tw-w-full tw-flex tw-justify-around `}>
         <h2 className={`${darkMode ? 'hover:tw-text-jazicorn-pink' : 'hover:tw-text-jazicorn-pink'}
                     font-playfair-var-italic tw-text-xl
-                    tw-basis-3/12 tw-flex tw-flex-row tw-items-center tw-place-content-center `}>
+                    tw-basis-2/12 tw-flex tw-flex-row tw-items-center tw-place-content-center `}>
             <Link to={`/`}> jazicorn.dev</Link>
         </h2>
         <nav className={`${darkMode ? '' : '' } tw-border-jazicorn-pink tw-border-x 
-                        tw-flex tw-flex-row tw-items-center tw-place-content-center tw-gap-2  tw-basis-6/12`}>
+                        tw-flex tw-flex-row tw-items-center tw-place-content-center tw-gap-2  tw-basis-8/12`}>
             <ol className={`${darkMode ? 'hover:[&>*]:tw-text-white marker:tw-text-jazicorn-pink' : 
             'hover:[&>li]:tw-text-jazicorn-pink marker:tw-text-jazicorn-gray'} tw-pt-1 tw-text-[17px] tw-flex tw-flex-row tw-place-content-center tw-place-items-center tw-gap-8 tw-list-decimal tw-pl-6`}>
                 <li className={``}>
@@ -72,8 +72,8 @@ const { isMobile, isMobileMD, isDesktopMDXL, isDesktopLG, isDesktopXL } = useWin
             </ol>
         </nav>
         <nav className={`tw-flex-row tw-border-jazicorn-pink
-                        tw-basis-3/12 tw-flex  tw-items-center tw-place-content-center tw-gap-2 tw-text-sm font-playfair-var-italic-600`}>
-            <ul className={`${darkMode ? 'tw-text-jazicorn-gray hover:[&>li]:tw-text-jazicorn-gray-500' : 'hover:[&>li]:tw-text-jazicorn-pink'}
+                        tw-basis-2/12 tw-flex  tw-items-center tw-place-content-center tw-gap-2 tw-text-sm font-playfair-var-italic-600`}>
+            {/* <ul className={`${darkMode ? 'tw-text-jazicorn-gray hover:[&>li]:tw-text-jazicorn-gray-500' : 'hover:[&>li]:tw-text-jazicorn-pink'}
                             ${isDesktopLG && "tw-border-r-2 tw-pr-2 tw-gap-2"}
                             ${isDesktopXL && "tw-border-r-2 tw-pr-4 tw-gap-4"}
                             tw-flex tw-flex-row tw-place-items-center   tw-border-jazicorn-gray-500`}>
@@ -87,13 +87,11 @@ const { isMobile, isMobileMD, isDesktopMDXL, isDesktopLG, isDesktopXL } = useWin
                         Resume
                     </Link>
                 </li>
-            </ul>
+            </ul> */}
             <div className={`tw-flex tw-row tw-h-[26px]`}>
                 <ul className={`${darkMode ? 'tw-text-jazicorn-gray hover:[&>li]:tw-text-jazicorn-pink' 
                                 : 'hover:[&>li]:tw-text-jazicorn-pink'}
-                                ${isDesktopLG && "tw-border-r-2 tw-border-jazicorn-gray-500 tw-pr-2"}  
-                                ${isDesktopXL && "tw-border-r-2 tw-border-jazicorn-gray-500 tw-pl-1 tw-pr-3"}    
-                                tw-flex-row tw-flex tw-place-items-center tw-gap-2`}>
+                                tw-border-r-2 tw-border-jazicorn-gray-500 tw-pl-1 tw-pr-3 tw-flex-row tw-flex tw-place-items-center tw-gap-2`}>
                     <li className={`${darkMode ? '' : ''} `}>
                         <a target="_blank" href="https://www.linkedin.com/in/jasmine-anderson-dev/"><IconBrandLinkedin /></a>
                     </li>
@@ -101,10 +99,8 @@ const { isMobile, isMobileMD, isDesktopMDXL, isDesktopLG, isDesktopXL } = useWin
                         <a target="_blank" href="https://github.com/jazicorn"><IconBrandGithub /></a>
                     </li>
                 </ul>
-                <ul className={`${darkMode ? 'hover:[&>*]:tw-text-jazicorn-pink' : 'hover:[&>*]:tw-text-jazicorn-pink'} 
-                                ${isDesktopLG && 'tw-pl-1 tw-pt-1'}
-                                ${isDesktopXL && 'tw-pl-3 tw-pt-1'}
-                                tw-flex tw-flex-row tw-place-items-center `}>
+                <ul className={`${darkMode ? 'hover:[&>*]:tw-text-jazicorn-pink' : 'hover:[&>*]:tw-text-jazicorn-pink'}
+                                tw-pl-2.5 tw-pt-1 tw-flex tw-flex-row tw-place-items-center `}>
                 {!darkMode ? (
                     <li>
                         <button className="tw-place-self-center" onClick={toggleTheme}>

@@ -74,7 +74,7 @@ const { isMobile, isMobileMD, isDesktopMDLG, isDesktopLG, isDesktopXL } = useWin
         </nav>
         <nav className={`${isMobileMD ? 'tw-border-x  tw-border-jazicorn-pink tw-w-[300px] tw-flex-col' : 'tw-flex-row tw-border-jazicorn-pink'} 
                         tw-basis-3/12 tw-flex  tw-items-center tw-place-content-center tw-gap-2 tw-text-sm font-playfair-var-italic-600`}>
-            <ul className={`${darkMode ? 'tw-text-jazicorn-gray hover:[&>li]:tw-text-jazicorn-gray-500' : 'hover:[&>li]:tw-text-jazicorn-pink'}
+            {/* <ul className={`${darkMode ? 'tw-text-jazicorn-gray hover:[&>li]:tw-text-jazicorn-gray-500' : 'hover:[&>li]:tw-text-jazicorn-pink'}
                             ${isMobile && "tw-gap-4"}
                             tw-flex tw-flex-row tw-place-items-center   tw-border-jazicorn-gray-500`}>
                <li className={`${darkMode ? 'tw-border-jazicorn-pink' : 'tw-border-jazicorn-gray'} tw-border tw-px-1`}>
@@ -87,7 +87,7 @@ const { isMobile, isMobileMD, isDesktopMDLG, isDesktopLG, isDesktopXL } = useWin
                         Resume
                     </Link>
                 </li>
-            </ul>
+            </ul> */}
             <div className={`tw-flex tw-row tw-h-[26px]`}>
                 <ul className={`${darkMode ? 'tw-text-jazicorn-gray hover:[&>li]:tw-text-jazicorn-pink' 
                                 : 'hover:[&>li]:tw-text-jazicorn-pink'}

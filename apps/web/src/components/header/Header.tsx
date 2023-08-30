@@ -17,7 +17,7 @@ import HeaderMobile from './HeaderMobile';
 
 
 const Header = () => {
-const { isMobile, isMobileMD, isDesktopMDLG, isDesktopLG, isDesktopXL } = useWindowSize();
+const { isMobile, isDesktop } = useWindowSize();
   const theme = useContext(ThemeContext)
   const darkMode = theme.state.darkMode
   //turn darkmode on and off
@@ -33,8 +33,8 @@ const { isMobile, isMobileMD, isDesktopMDLG, isDesktopLG, isDesktopXL } = useWin
 
   return (
     <div className={`${darkMode ? 'tw-bg-black tw-text-jazicorn-gray ' : 'tw-bg-light'}`}>
-        {isMobileMD && <HeaderMobile/>}
-        {isDesktopLG && <HeaderDesktop/>}
+        {isMobile && <HeaderMobile/>}
+        {isDesktop && <HeaderDesktop/>}
     </div>
   )
 }
