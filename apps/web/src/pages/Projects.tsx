@@ -12,19 +12,22 @@ import { ThemeContext } from '../context/ThemeContext';
 // hooks
 import useWindowSize from '../hooks/useWindowSize';
 import Transition from '../hooks/useTransition';
+// components
+import Project from '../components/Project';
 
-const Resources = () => {
+const Projects = () => {
   const { isMobile } = useWindowSize();
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
 
   return (
     <Transition>
-      <main className={`${darkMode ? 'tw-text-white' : 'tw-text-black'} tw-h-full tw-flex tw-flex-col`}>
-        <h1 className="h6 font-playfair-var-italic tw-self-center">Resources</h1>
+      <main className={`${darkMode ? 'tw-text-gray-400 [&_span]:tw-text-jazicorn-pink' : 'tw-text-black [&_span]:tw-text-gray-400'} 
+      tw-h-full tw-flex tw-flex-col`}>
+        <h1 className="h9 font-playfair-var-italic tw-self-center"><span>3.</span> Projects</h1>
       </main>
     </Transition>
   )
 }
 
-export default Resources
+export default Projects

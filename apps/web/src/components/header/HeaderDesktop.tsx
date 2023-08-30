@@ -1,6 +1,8 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { ThemeContext } from '../context/ThemeContext';
+// hooks
+import useWindowSize from '../../hooks/useWindowSize';
+import { ThemeContext } from '../../context/ThemeContext';
 // icons
 import { 
     IconHome,
@@ -10,11 +12,10 @@ import {
     IconBrandGithub,
     IconBrandLinkedin 
 } from '@tabler/icons-react';
-// hooks
-import useWindowSize from '../hooks/useWindowSize';
 
-const Header = () => {
-const { isMobile, isMobileMD, isDesktopMDLG, isDesktopLG, isDesktopXL } = useWindowSize();
+
+const HeaderDesktop = () => {
+const { isMobile, isMobileMD, isDesktopMDXL, isDesktopLG, isDesktopXL } = useWindowSize();
   const theme = useContext(ThemeContext)
   const darkMode = theme.state.darkMode
   //turn darkmode on and off
@@ -30,16 +31,16 @@ const { isMobile, isMobileMD, isDesktopMDLG, isDesktopLG, isDesktopXL } = useWin
 
   return (
     <header
-    className={`${darkMode ? 'tw-bg-black tw-text-jazicorn-gray ' : 'tw-bg-light'} 
-                ${isMobileMD ? 'tw-flex-col tw-place-items-center [&>*]:tw-place-content-center [&>*]:tw-py-3' : ' tw-h-[52px] tw-flex-row tw-border-b tw-border-jazicorn-pink '}
+    className={`${darkMode ? 'tw-bg-black tw-text-jazicorn-gray ' : 'tw-bg-light'}
+                ${isDesktopMDXL && 'tw-border-b tw-border-jazicorn-pink'}
+                tw-h-[52px] tw-flex-row tw-border-b tw-border-jazicorn-pink 
                 tw-w-full tw-flex tw-justify-around `}>
         <h2 className={`${darkMode ? 'hover:tw-text-jazicorn-pink' : 'hover:tw-text-jazicorn-pink'}
-                        ${isMobileMD ? 'tw-border-x tw-border-jazicorn-pink tw-w-[300px]' : ''}  tw-basis-3/12
-                        tw-text-xl tw-flex tw-flex-row tw- tw-items-center tw-place-content-center font-playfair-var-italic`}>
+                    font-playfair-var-italic tw-text-xl
+                    tw-basis-3/12 tw-flex tw-flex-row tw-items-center tw-place-content-center `}>
             <Link to={`/`}> jazicorn.dev</Link>
         </h2>
-        <nav className={`${darkMode ? '' : '' } 
-                        ${isMobileMD ? 'tw-border-y tw-border-jazicorn-pink tw-w-full' : 'tw-border-jazicorn-pink tw-border-x'} 
+        <nav className={`${darkMode ? '' : '' } tw-border-jazicorn-pink tw-border-x 
                         tw-flex tw-flex-row tw-items-center tw-place-content-center tw-gap-2  tw-basis-6/12`}>
             <ol className={`${darkMode ? 'hover:[&>*]:tw-text-white marker:tw-text-jazicorn-pink' : 
             'hover:[&>li]:tw-text-jazicorn-pink marker:tw-text-jazicorn-gray'} tw-pt-1 tw-text-[17px] tw-flex tw-flex-row tw-place-content-center tw-place-items-center tw-gap-8 tw-list-decimal tw-pl-6`}>
@@ -70,10 +71,9 @@ const { isMobile, isMobileMD, isDesktopMDLG, isDesktopLG, isDesktopXL } = useWin
                 </li>
             </ol>
         </nav>
-        <nav className={`${isMobileMD ? 'tw-border-x tw-border-jazicorn-pink tw-w-[300px] tw-flex-col' : 'tw-flex-row tw-border-jazicorn-pink'} 
+        <nav className={`tw-flex-row tw-border-jazicorn-pink
                         tw-basis-3/12 tw-flex  tw-items-center tw-place-content-center tw-gap-2 tw-text-sm font-playfair-var-italic-600`}>
             <ul className={`${darkMode ? 'tw-text-jazicorn-gray hover:[&>li]:tw-text-jazicorn-gray-500' : 'hover:[&>li]:tw-text-jazicorn-pink'}
-                            ${isMobile && "tw-gap-4"}
                             ${isDesktopLG && "tw-border-r-2 tw-pr-2 tw-gap-2"}
                             ${isDesktopXL && "tw-border-r-2 tw-pr-4 tw-gap-4"}
                             tw-flex tw-flex-row tw-place-items-center   tw-border-jazicorn-gray-500`}>
@@ -91,7 +91,6 @@ const { isMobile, isMobileMD, isDesktopMDLG, isDesktopLG, isDesktopXL } = useWin
             <div className={`tw-flex tw-row tw-h-[26px]`}>
                 <ul className={`${darkMode ? 'tw-text-jazicorn-gray hover:[&>li]:tw-text-jazicorn-pink' 
                                 : 'hover:[&>li]:tw-text-jazicorn-pink'}
-                                ${isMobile && "tw-border-jazicorn-gray-500 tw-pr-1"}
                                 ${isDesktopLG && "tw-border-r-2 tw-border-jazicorn-gray-500 tw-pr-2"}  
                                 ${isDesktopXL && "tw-border-r-2 tw-border-jazicorn-gray-500 tw-pl-1 tw-pr-3"}    
                                 tw-flex-row tw-flex tw-place-items-center tw-gap-2`}>
@@ -103,7 +102,6 @@ const { isMobile, isMobileMD, isDesktopMDLG, isDesktopLG, isDesktopXL } = useWin
                     </li>
                 </ul>
                 <ul className={`${darkMode ? 'hover:[&>*]:tw-text-jazicorn-pink' : 'hover:[&>*]:tw-text-jazicorn-pink'} 
-                                ${isMobile && 'tw-pl-1 tw-pt-1'}
                                 ${isDesktopLG && 'tw-pl-1 tw-pt-1'}
                                 ${isDesktopXL && 'tw-pl-3 tw-pt-1'}
                                 tw-flex tw-flex-row tw-place-items-center `}>
@@ -127,4 +125,4 @@ const { isMobile, isMobileMD, isDesktopMDLG, isDesktopLG, isDesktopXL } = useWin
   )
 }
 
-export default Header
+export default HeaderDesktop
