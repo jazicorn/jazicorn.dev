@@ -16,15 +16,15 @@ import ErrorBoundary from "./ErrorBoundary.tsx";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 /**Pages*/
-import App from './pages/App.tsx';
+import App from './App.tsx';
 /**Components*/
-import Home from './components/Home.tsx';
-import About from './components/About.tsx';
-import Projects from './components/Projects.tsx';
-import Contact from './components/Contact.tsx';
-import Resources from './components/Resources.tsx';
-import Resume from './components/Resume.tsx';
-import Blog from './components/Blog.tsx';
+import Home from './pages/Home.tsx';
+import About from './pages/About.tsx';
+import Projects from './pages/Projects.tsx';
+import Contact from './pages/Contact.tsx';
+import Resources from './pages/Resources.tsx';
+import Resume from './pages/Resume.tsx';
+import Blog from './pages/Blog.tsx';
 
 const router = Router(
   createRoutesFromElements(

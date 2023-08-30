@@ -42,13 +42,17 @@ const Home = () => {
                           tw-col-start-5 tw-col-end-6 tw-row-start-5 tw-row-end-5 tw-border-x-2 tw-border-t-2 tw-rounded-t-2xl tw-border-dotted `}/>
             </div>
             {/**Information */}
-            <div className={`${darkMode ? "tw-border-gray-300" : "tw-border-jazicorn-pink-200"} tw-border tw-z-100 tw-absolute tw-place-items-center tw-items-center`}>
-              <h1 className={`${isMobile ? 'h9' : 'h7'} `}>Hello, my name is</h1>
-              <h2 className={`${isMobile ? 'h8' : 'h6'} break-word tw-text-clip font-playfair-var-italic tw-text-jazicorn-pink`}>
-                Jasmine Anderson</h2>
-              <section className={`${isMobile ? 'tw-text-xl' : 'tw-text-2xl'} tw-py-4`}>
-                <p>I'm a <span className="tw-text-jazicorn-purple">Full-Stack</span> <span className="tw-text-jazicorn-emerald">React </span> 
-                Developer with a background in <span className="tw-text-jazicorn-amber">Business Management.</span></p>
+            <div className={ `${darkMode ? "tw-bg-neutral-700 " : "tw-bg-gray-200"} tw-z-100 tw-absolute tw-place-items-center tw-items-center`}>
+              <div className={`${darkMode ? "tw-border-gray-300  " 
+            : "tw-border-jazicorn-pink-200"} tw-border tw-py-4`}>
+                 <h1 className={`${isMobile ? 'h9' : 'h8'} `}>Hello, my name is</h1>
+                <h2 className={`${isMobile ? 'h8' : 'h7'} break-word tw-text-clip tw-text-jazicorn-pink`}>
+                  Jasmine Anderson</h2>
+              </div>
+              <section className={ `
+                ${isMobile ? 'tw-text-lg ' : 'tw-text-xl'} tw-py-4 tw-mt-4`}>
+                <p>I'm a <span className="tw-text-purple-400">Full-Stack</span> <span className="tw-text-jazicorn-emerald">React </span> 
+                Developer</p>
               </section>
             </div>
         </article>

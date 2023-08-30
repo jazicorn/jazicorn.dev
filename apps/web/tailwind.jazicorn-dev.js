@@ -64,8 +64,11 @@ export default {
         'layout-banner': 'repeat(6, 1fr)',
         'layout-banner-xl': '1fr, minmax(100px, 1200px), 1fr',
         'layout-banner-mobile': '1fr, minmax(100px, 800px), 1fr',
-        'layout-project': '50px, 450px, 350px',
-        'layout-project-reverse': '350px, 450px, 50px',
+        'layout-projects': '200px, auto',
+        'layout-project': '40px, 350px, 250px',
+        'layout-project-reverse': '250px, 350px, 40px',
+        'layout-project-xl': '50px, 450px, 350px',
+        'layout-project-reverse-xl': '350px, 450px, 50px',
       },
       gridTemplateRows: {
         'layout-app': '3em, auto',
@@ -76,8 +79,8 @@ export default {
         'layout-banner': 'repeat(5, 1fr)',
         'layout-banner-xl': '1fr, minmax(100px, 1200px), 1fr',
         'layout-banner-mobile': '1fr, minmax(100px, 800px), 1fr',
-        'layout-project': 'auto'
-        
+        'layout-projects': '100px, auto',
+        'layout-project': 'auto',
       }
     },
   }
