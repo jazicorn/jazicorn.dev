@@ -14,7 +14,7 @@ import useWindowSize from '../hooks/useWindowSize';
 import Transition from '../hooks/useTransition';
 
 const Home = () => {
-  const { isMobile, isDesktopMDXL, isDesktopXL } = useWindowSize();
+  const { isMobile, isMobileMD, isDesktopMDXL, isDesktopXL } = useWindowSize();
   const theme = useContext(ThemeContext)
   const darkMode = theme.state.darkMode
 
@@ -42,19 +42,16 @@ const Home = () => {
                           tw-col-start-5 tw-col-end-6 tw-row-start-5 tw-row-end-5 tw-border-x-2 tw-border-t-2 tw-rounded-t-2xl tw-border-dotted `}/>
             </div>
             {/**Information */}
-            <div className={ `${darkMode ? "tw-bg-neutral-700 " : "tw-bg-gray-200"} tw-z-100 tw-absolute tw-place-items-center tw-items-center`}>
-              <div className={`${darkMode ? "tw-border-gray-300  " 
-            : "tw-border-jazicorn-pink-200"} tw-border tw-py-4`}>
-                 <h1 className={`${isMobile ? 'h9' : 'h8'} `}>Hello, my name is</h1>
-                <h2 className={`${isMobile ? 'h8' : 'h7'} break-word tw-text-clip tw-text-jazicorn-pink`}>
-                  Jasmine Anderson</h2>
+            <section className={ `${darkMode ? "tw-bg-neutral-700 tw-border-gray-300" : "tw-bg-gray-200 tw-border-jazicorn-pink-200"} tw-w-full tw-py-16 tw-border tw-z-100 tw-absolute tw-place-items-center tw-items-center`}>
+              <div className={`${darkMode ? "" : ""}`}>
+                <h1 className={`${isMobile && 'h8 tw-leading-3'} ${isDesktopMDXL && 'h7 tw-leading-6'} 
+                ${isDesktopXL && 'h5 tw-leading-8'}
+                tw-text-jazicorn-pink`}>Jasmine Anderson</h1>
               </div>
-              <section className={ `
-                ${isMobile ? 'tw-text-lg ' : 'tw-text-xl'} tw-py-4 tw-mt-4`}>
-                <p>I'm a <span className="tw-text-purple-400">Full-Stack</span> <span className="tw-text-jazicorn-emerald">React </span> 
-                Developer</p>
-              </section>
-            </div>
+              <div className={`${isMobile && 'tw-text-sm tw-w-fit'} ${isDesktopMDXL && 'tw-text-base'} ${isDesktopXL && 'tw-text-lg'}  tw-mt-8`}>
+                <p>Software Engineer // Web Developer // Javascript Developer</p>
+              </div>
+            </section>
         </article>
         <footer className={`${darkMode ? "" : ""} tw-h-full tw-w-full tw-col-start-1 tw-col-end-4 tw-row-span-2 tw-border-t`}/>
       </main>
